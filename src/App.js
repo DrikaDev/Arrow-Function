@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+//Crie um component de class
+import React, {Component} from "react";
+class App extends Component{
+  // arrow function:
+  // nomedafuncao = () => {
+  //   return <h2>Mensagem pela Arrow function</h2>
+  // }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // Crie uma arrow function que receba uma mensagem e exiba na tela
+  treinandoArrowFunction = (msg) => {
+    return <h3>{msg}</h3>
+  }
+  
+  // Crie uma arrow function que retorne o dobro de um número e exiba na tela
+  dobroDoNumero = (x) => {
+    return <p>O dobro do número escolhido é: {x * 2}</p>
+  }
+
+  render(){
+    return(
+      <>
+      <h1>Desafio de Arrow Function</h1>
+      {this.treinandoArrowFunction("Estou aprendendo como faz uma Arrow Function.")}
+      {this.dobroDoNumero(10)}
+      </>
+    )
+  }
 }
 
 export default App;
